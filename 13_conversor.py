@@ -1,7 +1,20 @@
 # Programa que permite cambiar un moneda de un país a dólares
 
-# Las triple comillas permiten crear un cadena de caracteres
-# con varias lineas, primero creamos el menú principal
+# Es una buena practica colocar las funciones en la parte superior
+# antes de comenzar con el código principal, para que cuando python
+# las tenga lista antes de ser llamadas
+# Conversor realiza la conversión de una moneda a dolares, esta 
+# compuesta por dos parametros: tipo_pesos que el nombre del peso
+# a calcular y valor_dolar que es el valor de la moneda americana
+# en el momento de calcular
+def conversor(tipo_pesos, valor_dolar):
+    pesos = input("¿Cuántos pesos " + tipo_pesos + " tienes?: ")
+    pesos = float(pesos)
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print('Tienes $' + dolares + ' dólares')
+
 menu = """
 Bienvenido al conversor de monedas 💰
 
@@ -16,39 +29,14 @@ opcion = input(menu)
 
 # Pesos colombianos a dólares
 if opcion == '1':
-    # Input para pedir al usuario que ingrese un valor
-    pesos = input("¿Cunántos pesos colombianos tienes?: ")
-    # float permite cambiar el tipo de datos de string a flotantes
-    pesos = float(pesos)
-    valor_dolar = 3600
-    dolares = pesos / valor_dolar
-    # La función round permite redondear una cifra al numero de
-    # decimales que escribamos, en este caso dos.
-    dolares = round(dolares, 2)
-    # str permite pasar a un tipo de datos string
-    dolares = str(dolares)
-    print('Tienes $' + dolares + ' dólares')
-
+    # Llamamos a la función conversor 
+    conversor('colombianos', 3600)
 # Pesos argentinos a dólares
 elif opcion == '2':
-    pesos = input("¿Cunántos pesos argentinos tienes?: ")
-    pesos = float(pesos)
-    valor_dolar = 94
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print('Tienes $' + dolares + ' dólares')
-
+    conversor('argentinos', 94)
 # Pesos mexicanos a dólares
 elif opcion == '3':
-    pesos = input("¿Cunántos pesos mexicanos tienes?: ")
-    pesos = float(pesos)
-    valor_dolar = 19
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-    print('Tienes $' + dolares + ' dólares')
-
+    conversor('mexicanos', 19)
 # Ninguna de las anteriores
 else:
     print('Ingresa una opción correcta por favor')

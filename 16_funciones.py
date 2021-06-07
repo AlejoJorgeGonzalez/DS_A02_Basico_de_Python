@@ -15,21 +15,31 @@
 
 # En la funciones esta los parametros que son variables que le
 # ingresamos a la función, que para este caso se llama mensaje
-def conversacion(mensaje):
-    print('Hola')
-    print('Cómo estas')
-    print(mensaje)
-    print('Adios')
+# def conversacion(mensaje):
+#     print('Hola')
+#     print('Cómo estas')
+#     print(mensaje)
+#     print('Adios')
 
 
-opcion = int(input('Elige una opción (1, 2, 3): '))
-if opcion == 1:
-    # Acá llamamos la funcion conversación y note como se coloca
-    # la variable mensaje dentro de los parentesis
-    conversacion('Elegistes la opción 1')
-elif opcion == 2:
-    conversacion('Elegistes la opción 2')
-elif opcion == 3:
-    conversacion('Elegistes la opción 3')
-else:
-    print('Escribe la opción correcta')
+# opcion = int(input('Elige una opción (1, 2, 3): '))
+# if opcion == 1:
+#     # Acá llamamos la funcion conversación y note como se coloca
+#     # la variable mensaje dentro de los parentesis
+#     conversacion('Elegistes la opción 1')
+# elif opcion == 2:
+#     conversacion('Elegistes la opción 2')
+# elif opcion == 3:
+#     conversacion('Elegistes la opción 3')
+# else:
+#     print('Escribe la opción correcta')
+
+def suma(a, b):
+    print('Se suman dos números')
+    resultado = a + b
+    # Con la palabra return, lo que hacemos es que devolvemos 
+    # la variable que llamemos
+    return resultado
+
+sumatoria = suma(1, 4)
+print(sumatoria)
